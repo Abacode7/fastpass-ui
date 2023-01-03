@@ -7,7 +7,8 @@ import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.reactive.function.client.WebClient;
 
-@LoadBalancerClient(name = "fastpass-service", configuration = LoadBalancerConfig.class)
+//@LoadBalancerClient(name = "fastpass-service", configuration = LoadBalancerConfig.class)
+@LoadBalancerClient(name = "fastpass-service", configuration = LoadBalancerAlgorithmConfig.class)
 @SpringBootApplication
 public class FastpassUiApplication {
 

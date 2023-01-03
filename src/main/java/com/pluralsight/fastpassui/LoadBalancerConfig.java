@@ -12,11 +12,11 @@ import org.springframework.context.annotation.Primary;
 
 import reactor.core.publisher.Flux;
 
-@Configuration
+//@Configuration
 public class LoadBalancerConfig {
 
-    @Bean
-    @Primary
+    //@Bean
+    //@Primary
     ServiceInstanceListSupplier loadInstanceListSupplier(){
         return new TollServiceInstanceListSupplier("fastpass-service");
     }
