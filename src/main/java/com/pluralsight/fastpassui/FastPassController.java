@@ -16,10 +16,8 @@ public class FastPassController {
     @RequestMapping(path="/customerdetails")
 	public String getFastPassCustomerDetails(@RequestParam(defaultValue = "800") String fastpassid, Model m) {
 
-        //WebClient client = WebClient.create();
-
         FastPassCustomer customer = webClientBuilder.build().get()
-            .uri("http://fastpass-service/fastpass?fastpassid=" + fastpassid)
+            .uri("http://localhost:8082/fastpass?fastpassid=" + fastpassid)
             .retrieve()
             .bodyToMono(FastPassCustomer.class)
             .block();
